@@ -1,4 +1,4 @@
-## Setup
+## Setup (currently not possible due to missing binary files)
 
 To set up the system naviagate to the folder product and with docker compose installed type in following command:
 
