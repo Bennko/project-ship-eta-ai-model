@@ -1,0 +1,22 @@
+n_estimators: number of trees in forest
+-> Default: 100
+max_features: The number of features to consider when looking for the best split
+-> Default: auto
+min_samples_split: The minimum number of samples required to split an internal node
+-> Default: 2
+min_samples_leaf: The minimum number of samples required to be at a leaf node
+-> Default: 1
+max_depth: The maximum depth of the tree
+-> Default: None (nodes are expanded until all leaves contain less than min_samples_split samples)
+
+n_estimators must be high but cant be too high, otherwise the runtime is too high
+best so far is 350
+
+I kept max_features at 0.5 
+
+min_samples_leaf and max_depth on default
+
+Best results with auto min_samples_split -> 10
+
+Best result: MAE: 1.8
+n_estimators=350, max_features=auto, min_samples_split=2, min_samples_leaf=1, max_depth=None, random_state=42

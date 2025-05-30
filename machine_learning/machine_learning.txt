@@ -1,0 +1,30 @@
+Selecting machine learning methods for ETT and AIS data
+
+This file will guide through the process of selecting the best machine learning method for calculating the ETT. The goal is to keep the error rate as los as possible.
+
+I will briefly introduce 4 candidate methods and explain why I chose them. 
+At the end I will have one or more methods left and explain on which criterions I based my decision and why the remaining methods are the best.
+
+What I found out quickly was, that the python library "scikit learn" will be very important for us. It has a very good documentation and will be very important for us to implement machine learning models.
+
+Linear regression: 
+This algorithm is good to use for data with linear relationship between input features and the time of travel. For example if we can map a specific travel time to a ship size or the weather conditions. We probably won't have enough data types to do this, since the only data we have which could influence the travel time is the ship size. Therefore I wont consider this method from here on.
+
+Nearest Neighbours Regression model:
+I found this model good and easy to use for some experiments in the beginning.
+In my first approach I tried the following: 
+-Taking 3 attributes latitude, longitude and SOG and map them to a new array X
+-The function trip_time calculates the difference between the start and endpoint of a trip and maps to another array Y
+-Give the two arrays X and Y to the functions KNeighborsRegressor and predict
+-Calculating the average difference between predicted values and real values
+As of now, I was not able to implement the trip_time function. 
+
+In my research I found the following paper: https://www.mdpi.com/2305-6290/4/1/1/htm
+This could be very helpful, to get some inspiration for our further project work.
+
+Based on this research, I concluded that the best machine learning algorithms to use for this project are:
+-Extra Trees (Extremely Randomized Trees)
+-AdaBoost (Adaptive Boosting)
+-SVR (Support Vector Regression)
+
+The goal for our next sprints should be, to gain more knowledge on the mentioned algorithms and try to implement them. 

@@ -1,0 +1,17 @@
+services:
+  server:
+    build: ./server
+    ports: 
+      - "3000:3000"
+    networks:
+      - network1
+
+  ett-service:
+    build: ./ett-service
+    ports: 
+      - "5000:5000"
+    networks:
+      - network1
+
+networks:
+  network1:
